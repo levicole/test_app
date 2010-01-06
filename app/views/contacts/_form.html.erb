@@ -1,0 +1,19 @@
+<% form_for(@contact) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="actions">
+    <% if @contact.new_record? %>
+      <%= f.submit 'Create' %>
+    <% else %>
+      <%= f.submit 'Update' %>
+    <% end %>
+  </div>
+<% end %>
